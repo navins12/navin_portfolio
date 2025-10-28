@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global body */
+:root {
+  --matte-gold: #d4af37;
+  --bg-dark-1: #0b0b0b;
+  --bg-dark-2: #141414;
+}
+
+/* tech background overlay */
+body {
+  font-family: 'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg-dark-1);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* container background */
+.app-bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(10, 10, 10, 0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f96b7b1e4d22f5b8d0c6f1b33b1f3fc');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* subtle glow behind avatar */
+.avatar-glow {
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.12), 0 2px 6px rgba(0, 0, 0, 0.6) inset;
+}
+
+/* gold button hover shine */
+.btn-gold {
+  background: var(--matte-gold);
+  color: #0b0b0b;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.16);
+}
+
+/* inactive button style */
+.btn-inactive {
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--matte-gold);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.card-backdrop {
+  background: rgba(3, 3, 3, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  backdrop-filter: blur(6px);
+}
